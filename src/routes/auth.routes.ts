@@ -139,7 +139,8 @@ router.get('/premium-status', verifyJWT, checkPremiumStatus);
  *   get:
  *     summary: List all users (Admin)
  *     tags: [BusOwner]
- *     security: [{ bearerAuth: [] }]
+ *     security: [{ bearerAuth: [] }] 
+ * 
  */
 router.get('/admin/users', verifyJWT, verifyRole(['ADMIN']), (req, res) => {
     // TODO: Implement admin user list endpoint
